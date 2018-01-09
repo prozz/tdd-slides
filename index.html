@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Test Driven Development</title>
+  <link type="text/css" href="style.css" rel="stylesheet"></link>
+  <link type="text/css" href="slide.css" rel="stylesheet"></link>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script type="text/javascript" src="slide.js"></script>
+</head>
+<body>
+
+  <h1 id="title" class="slide">TDD</h1>
+  <p class="tagline">My thoughts on Test Driven Development</p>
+
+  <h2 id="definition" class="slide">Definition</h2>
+  <p class="tagline">test -&gt; <font color="red">red</font> -&gt; implementation -&gt; <font color="green">green</font></p>
+
+  <h2 id="why-1" class="content slide">why?</h2>
+  <ul class="list">
+    <li>developer memory is not good to keep all requirements at once</li>
+    <li>eventually bugs will slip into the code</li>
+    <li>test won’t fail without reason</li>
+  </ul>
+
+  <h2 id="why-2" class="content slide">why?</h2>
+  <ul class="list">
+    <li>stability of the system</li>
+    <li>sleep well at night</li>
+    <li>confidence</li>
+  </ul>
+
+  <h2 id="why-3" class="content slide">why?</h2>
+  <ul class="list">
+    <li>no pain refactoring especially when changing implementation of some critical service</li>
+    <li>quick feedback loop</li>
+    <li>no deployments and manual clicking needed to add new features</li>
+  </ul>
+
+  <h2 id="why-4" class="content slide">why?</h2>
+  <ul class="list">
+    <li>testable code is usually more clean and better structured</li>
+    <li>legacy code = not tested code in my book, noone like rewriting legacy stuff so...</li>
+  </ul>
+
+  <h2 id="why-4" class="content slide">why?</h2>
+  <ul class="list">
+    <li>time saver</li>
+  </ul>
+
+  <h2 id="myths" class="content slide">myths</h2>
+
+  <h3 id="myths-1" class="content slide">it takes too much time</h3>
+  <ul class="list">
+    <li>saves time for debugging and bug fixing</li>
+    <li>saves time for development deployments</li>
+    <li>it makes your work more structured and less chaotic</li>
+    <li>it makes returning to project after a long break way easier and less stressful</li>
+  </ul>
+
+  <h3 id="myths-2" class="content slide">writing tests is difficult and complex</h3>
+  <ul class="list">
+    <li>it may be when you write test after implementation because resulting code is not testable/structured wrong</li>
+    <li>it's easy when you write tests first and take small steps</li>
+    <li>changing mindset may be painful, but it's well worth it</li>
+  </ul>
+
+  <h3 id="myths-3" class="content slide">everything can be tested</h3>
+  <ul class="list">
+    <li>false, just use your judgement and test business logic that matters (eventually you will be testing small stuff too, it's that addicting :))</li>
+  </ul>
+
+  <h3 id="myths-4" class="content slide">tdd replaces architecture of the app</h3>
+  <ul class="list">
+    <li>architecture/design needs to be there, they give the team boundaries they need to be focused while driving the implementation with unit tests</li>
+    <li>what tdd gives you is early feedback about your architectural and design decisions</li>
+  </ul>
+
+  <h3 id="myths-5" class="content slide">tdd replaces qa</h3>
+  <ul class="list">
+    <li>NO, it doesn't</li>
+    <li>it's just a tool at developer disposal that, when applied correctly, gives a lot of advantages described above</li>
+  </ul>
+
+  <h2 id="how" class="content slide">how?</h2>
+  <ul class="list">
+    <li> thinking about tests first can be painful at the beginning, but becomes second nature quite soon</li>
+    <li> every mainstream language i know got some xUnit type of library, your favourite language have it as well</li>
+    <li> keep tests simple, new test = next smallest step on your way to full feature</li>
+    <li> use mocks for dependencies (develop with use of interfaces, so that implementation can be swaped!)</li>
+    <li> it's good idea to create a few project-wide abstract classes for unit tests, as they will be reused a lot, create little DSL</li>
+    <li> too much 'verify' calls is a code smell</li>
+    <li> too much asserts in single method is a code smell (debatable tho)</li>
+  </ul>
+
+  <h2 id="tips" class="content slide">tips</h2>
+  <ul class="list">
+    <li> if there is a bug, write test first to reproduce it, then fix - this will make any regression bug to not appear again</li>
+    <li> time is dependency, create time service and use mocking techniques to test time related code</li>
+    <li> after taking a break it's easy to loose context of you are trying to do with your code, always leave one single test breaking and it will be easy to pick up your job later on and get into 'THE ZONE' faster</li>
+    <li> gamification - treat your tests as a progress metric, do small celebrations on each milestone (like 50 tests per day or project having 100/500/1000 tests), brag on company's chat about it</li>
+    <li> share with other developers how your test suite just saved you a lot of debugging or introducing some critical bug at production, this builds team confidence (i personally had a few stories where tests really helped keep everything in good condition despite me thinking i know better and nothing should fail after my changes)</li>
+  </ul>
+
+  <h2 id="coding" class="content slide">let's code</h2>
+
+  <ul id="toolbar">
+    <li class="slide-toggle"><a href="#toggle" rel="slide.toggle" title="Toggle slide show">Toggle slide show</a></li>
+    <li class="slide-prev slideshow-only"><a href="#prev" rel="slide.prev" title="Previous slide">Previous slide</a></li>
+    <li class="slide-next slideshow-only"><a href="#next" rel="slide.next" title="Next slide">Next slide</a></li>
+  </ul>
+</body>
+</html>
