@@ -17,7 +17,7 @@
 
   <h2 id="why-1" class="content slide">why?</h2>
   <ul class="list">
-    <li>developer memory is not good to keep all requirements at once</li>
+    <li>no developer is able to keep all requirements in memory</li>
     <li>eventually bugs will slip into the code</li>
     <li>test won’t fail without reason</li>
   </ul>
@@ -59,7 +59,7 @@
 
   <h3 id="myths-2" class="content slide">writing tests is difficult and complex</h3>
   <ul class="list">
-    <li>it may be when you write test after implementation because resulting code is not testable/structured wrong</li>
+    <li>it may be when you write tests after implementation because resulting code is not testable/structured wrong</li>
     <li>it's easy when you write tests first and take small steps</li>
     <li>changing mindset may be painful, but it's well worth it</li>
   </ul>
@@ -71,7 +71,8 @@
 
   <h3 id="myths-4" class="content slide">tdd replaces architecture of the app</h3>
   <ul class="list">
-    <li>architecture/design needs to be there, they give the team boundaries they need to be focused while driving the implementation with unit tests</li>
+    <li>architecture/design needs to be there</li>
+    <li>architecture gives the team boundaries they need, so that they may focus on driving the implementation with unit tests</li>
     <li>what tdd gives you is early feedback about your architectural and design decisions</li>
   </ul>
 
@@ -96,7 +97,7 @@
   <ul class="list">
     <li> if there is a bug, write test first to reproduce it, then fix - this will make any regression bug to not appear again</li>
     <li> time is dependency, create time service and use mocking techniques to test time related code</li>
-    <li> after taking a break it's easy to loose context of you are trying to do with your code, always leave one single test breaking and it will be easy to pick up your job later on and get into 'THE ZONE' faster</li>
+    <li> after taking a break it's easy to loose context of what you are trying to do with your code, just leave one single test breaking and it will be easier to pick up your later on and get into 'THE ZONE' faster</li>
     <li> gamification - treat your tests as a progress metric, do small celebrations on each milestone (like 50 tests per day or project having 100/500/1000 tests), brag on company's chat about it</li>
     <li> share with other developers how your test suite just saved you a lot of debugging or introducing some critical bug at production, this builds team confidence (i personally had a few stories where tests really helped keep everything in good condition despite me thinking i know better and nothing should fail after my changes)</li>
   </ul>
