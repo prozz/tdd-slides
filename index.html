@@ -38,7 +38,7 @@
 
   <h3 id="why-3" class="content slide"></h3>
   <ul class="list">
-    <li>no pain refactoring especially when changing implementation of some critical service</li>
+    <li>no pain refactoring, especially when changing implementation of some critical service</li>
     <li>quick feedback loop</li>
     <li>no deployments and manual clicking needed to add new features</li>
   </ul>
@@ -92,10 +92,10 @@
   <h2 id="how" class="content slide">how?</h2>
   <ul class="list">
     <li> thinking about tests first can be painful at the beginning, but becomes second nature quite soon</li>
-    <li> every mainstream language i know got some xUnit type of library, your favourite language have it as well</li>
+    <li> every mainstream language i know has some xUnit type of library, your favourite language have it as well</li>
     <li> keep tests simple, new test = next smallest step on your way to full feature</li>
     <li> keep tests dumb, just test states, no logic inside tests</li>
-    <li> use mocks for dependencies (develop with use of interfaces, so that implementation can be swaped!)</li>
+    <li> use mocks for dependencies (develop with use of interfaces, so that implementation can be swapped!)</li>
     <li> it's good idea to create a few project-wide abstract classes for unit tests, as they will be reused a lot, create little DSL</li>
     <li> too much 'verify' calls is a code smell</li>
     <li> too much asserts in single method is a code smell (debatable tho)</li>
@@ -104,8 +104,8 @@
   <h2 id="tips" class="content slide">tips</h2>
   <ul class="list">
     <li> if there is a bug, write test first to reproduce it, then fix - this will make any regression bug to not appear again</li>
-    <li> time is dependency, create time service and use mocking techniques to test time related code</li>
-    <li> after taking a break it's easy to loose context of what you are trying to do with your code, just leave one single test breaking and it will be easier to pick up your later on and get into 'THE ZONE' faster</li>
+    <li> time is a dependency, create time service and use mocking techniques to test time related code</li>
+    <li> after taking a break it's easy to lose context of what you are trying to do with your code, just leave one single test breaking and it will be easier to pick up your job later on and get into 'THE ZONE' faster</li>
     <li> gamification - treat your tests as a progress metric, do small celebrations on each milestone (like 50 tests per day or project having 100/500/1000 tests), brag on company's chat about it</li>
     <li> share with other developers how your test suite just saved you a lot of debugging or introducing some critical bug at production, this builds team confidence (i personally had a few stories where tests really helped keep everything in good condition despite me thinking i know better and nothing should fail after my changes)</li>
   </ul>
